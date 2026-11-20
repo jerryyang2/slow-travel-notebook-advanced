@@ -90,3 +90,15 @@ Choose **English** above the page to switch the interface. Your choice is rememb
 Use **Trips** to change cities and dates, **Itinerary** to reorder stops or move them across days, **Lists** for preparation and shopping, **Expenses** for dated and timed spending, and **Notes → Backup and import** to move your journals and photos between devices or addresses. Flights and fixed reservations remain locked during reordering. Check transport and timing after changing the plan.
 
 Travel information follows the selected destination. Near-term forecasts refresh by city coordinates. Official advisories, health notices and entry eligibility require checking the linked government sources; no live safety rating or visa-free eligibility is inferred. Existing addresses, QR codes and browser records remain available.
+
+## 每日 8 個景點選擇與熱門景點規劃
+
+每日行程的「看今天 8 個景點選擇」提供真實景點候選，午餐、休息、晚餐與自由時間不列入景點數。可直接加入今天；已排在其他天的景點可以調整日期。新行程依節奏安排約 3、4–5 或 5–6 處，並保留用餐與交通緩衝。備選不是要求同一天全部走完；較長停留的博物館、交通距離與資料不足可能使實際安排較少。
+
+代表景點清單優先，其後綜合景點類型、Wikipedia 近 7 日文章閱覽資料與位置；文章長度不再作為熱門度。文章閱覽量只是排序參考，不代表旅客到訪人數或即時人氣排名。一般公園降低優先順序，每天自動排程至多一處自然風景。景點按區域順遊，不重複塞入同一地點；若符合條件的候選不足 8 處，會顯示取得數量與缺額，不捏造地點。
+
+已存旅程不會自動覆寫。按「重新規劃熱門景點」可先預覽每天的安排與候選，再「另存新旅程」。原手帳中的編輯、航班、住宿、花費、照片與備忘留在原手帳。新旅程的資料會沿用原網址的瀏覽器儲存區，並支援既有備份與匯入功能。
+
+代表景點資料版本：2026-11-21。國外景點名稱與座標由各 Wikipedia 景點條目核對；慕尼黑、布拉格、京都、東京、巴黎、倫敦、羅馬、福岡、大阪、首爾附有代表景點種子清單，其他城市仍可查詢公開景點。台灣沿用交通部觀光署的正常營運、公開景點資料；台北、花蓮、台中、台南、高雄、宜蘭另提高代表景點優先度，鄉鎮查詢維持行政區範圍。資料查詢僅傳送目的地與公開景點編號，不傳送私人行程或筆記。
+
+規劃參考：[慕尼黑官方遊程](https://www.munich.travel/en/topics/things-to-do/itinerary-suggestions)、[布拉格官方一日遊](https://prague.eu/en/home/discover/one-day-in-prague-you-wont-want-to-leave/)、[京都官方區域交通導覽](https://kyoto.travel/en/getting-around/)、[東京官方五日遊](https://www.gotokyo.org/en/story/walks-and-tours/tokyo-itinerary/index.html)、[巴黎必看地標](https://parisjetaime.com/eng/article/Paris-10-must-sees-a992)、[倫敦熱門景點](https://www.visitlondon.com/things-to-do/sightseeing/london-attraction/top-ten-attractions)、[臺北熱門景點](https://www.travel.taipei/zh-tw/must-visit/attractions/)。時間為規劃範例，開放日、門票、預約與實際交通仍應依景點官方資訊調整。

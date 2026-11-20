@@ -1,10 +1,30 @@
 # 慢慢走旅行手帳
 
-精緻手繪風格、繁體中文、手機優先的旅行 App，將原版與進階版整合為一個單一 HTML。
+精緻手繪風格、繁體中文／英文、手機優先的旅行 App，將原版與進階版整合為一個單一 HTML。
 
 主要網址：[慢慢走旅行手帳](https://slow-travel-notebook-20261119.asterina-co.chatgpt.site)
 
 原進階版網址保留為相容入口：[GitHub Pages](https://jerryyang2.github.io/slow-travel-notebook-advanced/)。兩個入口提供相同功能，私人紀錄仍依網址、瀏覽器分開儲存；不會自動跨站同步。
+
+## 繁體中文與 English 切換
+
+每頁上方提供「繁中／English」，會記住目前瀏覽器及入口的語言偏好。主要導覽、操作表單、按鈕、進度與提示支援雙語；手機原生日期、時間選擇器依裝置系統語言顯示。網址可使用 `?lang=en` 或 `?lang=zh-TW` 指定初始語言，入口頁會帶入所選語言。
+
+個人填寫的行程標題、筆記、每日手記、備忘、購物內容、住宿及照片文字不會因切換語言而改寫。城市與景點保留中文與英文／原文名稱；尚無可靠譯名時保留現有名稱。內建準備清單只翻譯未修改的預設項目，自訂內容保持原文。
+
+## 隨目的地更新的旅行資訊
+
+安全資訊統一依目前旅程的國家及城市顯示，包含官方旅遊警示入口、疾管署、簽證／入境、氣象及急難資訊。台灣國內旅程顯示國內旅遊、交通與防災資訊；沒有專屬資料的國家提供官方查詢目錄，不沿用其他國家的內容或電話。
+
+近期天氣由 Open-Meteo 依目的地座標與時區查詢，含七日高低溫、降雨機率及簡要穿搭建議；切換城市會重新查詢，可手動更新。預報顯示取得時間；更新失敗時保留上次預報與時間。近期預報不代表較遠旅行日期的天氣。較晚回傳的前一城市請求不會覆蓋目前城市畫面。
+
+警示、疫情與入境資格並未自動即時同步，本頁不顯示推定安全等級或免簽承諾。請開啟對應官方來源查詢。連結核對日期與個人「已查閱」時間分別標示，皆不當成官方公告更新時間。日本、德國及台灣提供已核對來源的當地急難號碼與離線 PNG 卡；其他地區先提供官方查詢入口。駐外館處須依實際旅行區域選擇。
+
+- [外交部旅遊警示](https://www.boca.gov.tw/sp-trwa-list-1.html)
+- [外交部簽證與國家資訊](https://www.boca.gov.tw/sp-foof-countrylp-01-1.html)
+- [疾管署國際旅遊疫情建議](https://www.cdc.gov.tw/InternationalEpidemicLevel/Index/6U0eCorDVCOBl2dEQchLcQ)
+- [日本外務省簽證資訊](https://www.mofa.go.jp/j_info/visit/visa/index.html)、[日本 JNTO 急難資訊](https://www.jnto.go.jp/emergency/eng/mi_guide.html)
+- [德國官方急難號碼](https://im.baden-wuerttemberg.de/de/sicherheit/wichtige-rufnummern-fuer-den-notfall)、[台北市政府緊急電話](https://english.gov.taipei/News_Content.aspx?n=2991F84A4FAF842F&s=58A14F503DDDA3D7)
 
 ## 可以做什麼
 
@@ -14,7 +34,7 @@
 - 台灣行程及景點推薦使用交通部觀光署的景點資料。內建 6,201 筆公開景點的精簡快照（資料版本 2026-11-20），可在城市選單更新官方資料。規劃時排除資料中非正常營運、非公開場域與登山步道，依約 25 公里內地點編排；鄉鎮選擇會限於該行政區。資料不足時仍可建立手動行程。
 - 首頁提供「城市重點景點」，選擇喜歡的地點、日期與時間後加入行程。國外城市及景點使用中文與英文／原文；原始資料缺少譯名時，可在地點編輯器自行補充。
 - 「行程」頁的「匯入行程」接受文字、TXT 或 CSV。先預覽、修改並選擇日期，再附加到既有行程；可復原最近一次匯入。一次最多 200 項，每天最多 40 項。僅解析文字格式，不會自動理解旅行社長篇文案、讀取私人分享連結或建立訂位。複雜行程可先整理為每天一段、每行一個地點。
-- 備忘錄支援重要置頂、日期、搜尋、完成狀態及刪除復原；每日手記依天數儲存。可自行拍照製作明信片。花費可手動填寫消費日期及選填時間，修改、刪除復原及備份會保留日期、時間與目的地時區。舊資料未填的日期時間保持空白；亦可用收據 OCR 輔助辨識後確認入帳。
+- 備忘錄支援重要置頂、日期、搜尋、完成狀態及刪除復原；每日手記依天數儲存。可自行拍照製作明信片。花費可手動填寫消費日期及選填時間，修改、刪除復原及備份會保留日期、時間與目的地時區。舊資料未填的日期時間保持空白；亦可用收據 OCR 輔助辨識後確認入帳。手動與收據記帳皆限制每趟 500 筆；儲存失敗時保留編輯內容，不會直接關閉。
 - 「備忘」頁的完整備份包含保留中的旅程、清單、備忘、每日手記、照片與地圖足跡；匯入會另建旅程副本。回收區的旅程請先還原再備份。地圖另有獨立足跡備份。
 
 ## 貼上文字的例子
@@ -62,3 +82,11 @@ CSV 第一列可用 `天數,時間,地點,備註,地址`。時間未提供時標
 - 底圖：© OpenStreetMap contributors；地圖程式 Leaflet 1.9.4，BSD 2-Clause License，完整授權保留於 HTML 及第三方授權文件。
 
 `index.html` 為唯一主要來源；`慢慢走旅行手帳-進階版.html` 是相容副本。合併前的兩版可由 Git 提交 `62cc00f` 還原；本機另保留快照。
+
+## English quick start
+
+Choose **English** above the page to switch the interface. Your choice is remembered in this browser. Personal notes, itinerary content, shopping items and photo captions keep their original wording. City and place names retain their available Chinese and English / original names. Native date and time controls follow your device language.
+
+Use **Trips** to change cities and dates, **Itinerary** to reorder stops or move them across days, **Lists** for preparation and shopping, **Expenses** for dated and timed spending, and **Notes → Backup and import** to move your journals and photos between devices or addresses. Flights and fixed reservations remain locked during reordering. Check transport and timing after changing the plan.
+
+Travel information follows the selected destination. Near-term forecasts refresh by city coordinates. Official advisories, health notices and entry eligibility require checking the linked government sources; no live safety rating or visa-free eligibility is inferred. Existing addresses, QR codes and browser records remain available.

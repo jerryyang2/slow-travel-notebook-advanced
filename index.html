@@ -2947,7 +2947,8 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
   "芬蘭": "Finland",
   "辨識後自動填入，可修改": "Filled after recognition; you can edit it",
   "這張收據已經記錄過，請先檢查下方消費紀錄，避免重複入帳。": "This receipt is already recorded. Check your expenses to avoid a duplicate.",
-  "消費已加入；目前瀏覽器無法儲存，關閉後將不保留。": "Expense added, but browser storage is unavailable. It will be lost when this page closes."
+  "消費已加入；目前瀏覽器無法儲存，關閉後將不保留。": "Expense added, but browser storage is unavailable. It will be lost when this page closes.",
+  "／日期待定": "/ Dates not set"
 };
     const NOTEBOOK_EN={...NOTEBOOK_EN_RAW,...Object.fromEntries(Object.entries(NOTEBOOK_EN_RAW).map(([zh,en])=>[toTraditionalChinese(zh),en]))};
     let notebookLanguage='zh-TW';
@@ -2996,7 +2997,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
       [/^按「新增(航班|住宿)」，把這趟旅程的安排收進手帳。$/,(_,kind)=>'Choose Add '+(kind==='航班'?'flight':'accommodation')+' to keep your booking details here.'],
       [/^(.*) 紀錄只存在此瀏覽器，不會隨連結分享。$/,(_,text)=>translateUI(text)+' Records stay in this browser and are not shared through public links.'],
       [/^日期待定・(\d+) 天$/,(_,n)=>'Dates not set · '+n+' days'],
-      [/^(.+)・(\d+) 天$/,(_,date,n)=>date+' · '+n+' days'],
+      [/^(.+)・(\d+) 天$/,(_,date,n)=>translateUI(date)+' · '+n+' days'],
       [/^(\d+) 晚$/,(_,n)=>n+' '+(n==='1'?'night':'nights')],
       [/^已儲存(航班|住宿)，資料保留在目前瀏覽器。$/,(_,kind)=>(kind==='航班'?'Flight':'Accommodation')+' saved in this browser.'],
       [/^已復原(航班|住宿)。$/,(_,kind)=>(kind==='航班'?'Flight':'Accommodation')+' restored.'],
@@ -3021,7 +3022,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
       [/^出發日 (.*)・以台灣日期計算$/,(_,date)=>'Departure '+date+' · Taiwan date'],
       [/^日期待定・(\d+) 天$/,(_,n)=>'Dates not set · '+n+' days'],
       [/^(.*)・(\d+) 日旅行手帳$/,(_,city,n)=>city+' · '+n+'-day journal'],
-      [/^(.*)・(\d+) 日旅行提案$/,(_,city,n)=>city+' · '+n+'-day suggestion'],
+      [/^(.*)・(\d+) 日旅行提案$/,(_,city,n)=>translateUI(city)+' · '+n+'-day suggestion'],
       [/^(.*) (\d+) 日・把喜歡的日子，一頁頁收好。$/,(_,city,n)=>city+' · '+n+' days. Keep your favorite moments.'],
       [/^(.+) 金額$/,(_,currency)=>'Amount ('+currency+')'],
       [/^1 (.+) 約等於\s*$/,(_,currency)=>'1 '+currency+' ≈ '],

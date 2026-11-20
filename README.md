@@ -1,26 +1,46 @@
-# 慢慢走旅行手帳・進階版
+# 慢慢走旅行手帳
 
-單一 HTML、繁體中文、手機優先的本機旅行手帳。直接開啟 `慢慢走旅行手帳-進階版.html`，或使用對應的 GitHub Pages 網址。
+精緻手繪風格、繁體中文、手機優先的旅行 App，將原版與進階版整合為一個單一 HTML。
 
-- 精緻手繪速寫：和紙白、Huninn 字型、墨棕細線與粉彩；城市封面依慕尼黑、福岡、東京自動變換。其他城市使用明確標示的旅行靜物，不套用其他城市地標。
-- 保留城市搜尋、旅行日期與天數、航班及住宿資料、照片明信片相簿、待辦購物清單與花費記錄。
-- 拖住行程卡片的「拖曳」把手即可排序；拖到上方其他日期可跨日移動。航班及固定預約不能拖動。調整後標記交通待重查，並提示時間重複、逆序或已有停留時間的重疊。可復原最近一次移動；交通與班次仍需自行查證。
-- 重要備忘錄支援新增、編輯、重要置頂、搜尋、指定旅行日、完成狀態與刪除復原。每份旅程最多 200 則。舊備忘及隨手便條保留；每日手記依日期分開記錄。
-- 「備忘」頁底部提供備份與匯入，包含保留中的旅程、每日手記、清單、備忘與照片。匯入會另建副本；回收區旅程請先還原再備份。最多匯入 50 份旅程，JSON 上限 150 MB。
-- 個人紀錄只保存在目前瀏覽器。兩個版本使用獨立的 localStorage／IndexedDB，互不覆寫；跨裝置請使用備份匯入。分享公開網址只分享程式，不會分享私人紀錄。
-- 所有插畫內嵌於 HTML；Huninn 網路字型、城市資料搜尋、OCR 辨識元件與地圖需要網路，沒有網路時採用系統字型。
+主要網址：[慢慢走旅行手帳](https://slow-travel-notebook-20261119.asterina-co.chatgpt.site)
 
-原版 `index.html` 及原 Sites 網址獨立維護；本進階版不取代原版或另一份旅遊小幫手。
+原進階版網址保留為相容入口：[GitHub Pages](https://jerryyang2.github.io/slow-travel-notebook-advanced/)。兩個入口提供相同功能，私人紀錄仍依網址、瀏覽器分開儲存；不會自動跨站同步。
 
-## 新增城市插畫
+## 可以做什麼
 
-使用內建 imagegen 產生，縮為 1280 × 853 JPEG，移除 EXIF／IPTC／註解後內嵌。既有八張手繪插畫沿用專案素材；沒有將個人照片或測試備份放入公開版本。
+- 搜尋目的地、設定天數與日期；每日行程可新增、修改、刪除、排序及跨日移動，並標示固定預約與交通待確認。航班、住宿、心願、出發前清單、行李、購物清單皆可自行編輯。
+- 「地圖」頁可搜尋城市、標記目前城市，或點擊地圖新增任意去過的地點，記下日期與回憶。足跡集中顯示所有旅程，也可篩選目前旅程，支援修改、刪除、復原與備份。最多 500 個足跡；不會因行程打卡或城市刪除而自動新增／刪除足跡。
+- 台灣 368 個鄉鎮市區支援中文搜尋、台／臺寫法及所屬縣市辨識。例：台北、臺北市、花蓮、花蓮縣、瑞芳、池上、恆春、中正區。查詢同名行政區時，請確認縣市。行政區位置是景點或界線的參考點，並非公所地址、交通集合點或精確導航點。
+- 台灣行程及景點推薦使用交通部觀光署的景點資料。內建 6,201 筆公開景點的精簡快照（資料版本 2026-11-20），可在城市選單更新官方資料。規劃時排除資料中非正常營運、非公開場域與登山步道，依約 25 公里內地點編排；鄉鎮選擇會限於該行政區。資料不足時仍可建立手動行程。
+- 首頁提供「城市重點景點」，選擇喜歡的地點、日期與時間後加入行程。國外城市及景點使用中文與英文／原文；原始資料缺少譯名時，可在地點編輯器自行補充。
+- 「行程」頁的「匯入行程」接受文字、TXT 或 CSV。先預覽、修改並選擇日期，再附加到既有行程；可復原最近一次匯入。一次最多 200 項，每天最多 40 項。僅解析文字格式，不會自動理解旅行社長篇文案、讀取私人分享連結或建立訂位。複雜行程可先整理為每天一段、每行一個地點。
+- 備忘錄支援重要置頂、日期、搜尋、完成狀態及刪除復原；每日手記依天數儲存。可自行拍照製作明信片。花費可手動填寫消費日期及選填時間，修改、刪除復原及備份會保留日期、時間與目的地時區。舊資料未填的日期時間保持空白；亦可用收據 OCR 輔助辨識後確認入帳。
+- 「備忘」頁的完整備份包含保留中的旅程、清單、備忘、每日手記、照片與地圖足跡；匯入會另建旅程副本。回收區的旅程請先還原再備份。地圖另有獨立足跡備份。
 
-- `assets/illustrations/fukuoka-handdrawn.jpg`：福岡塔、中洲屋台、那珂川、太宰府梅花、拉麵與旅行箱的旅行意象拼貼，非單一實際視角。
-- `assets/illustrations/tokyo-handdrawn.jpg`：淺草雷門、晴空塔、街屋、電車、相機與花草。
+## 貼上文字的例子
 
-共用繪製提示詞：Exquisite brown-gray fine pen lines, naturally irregular pencil strokes and delicate crosshatching, soft translucent pastel watercolor, subtle dry pigment, warm ivory paper #FFFCF6, muted coral #F2A497, pale ochre #F6D27A, powder blue #A8D3E6 and sage #B9DAA5. Carefully observed miniature architecture, botanical detail, soft daylight, airy ivory feathered edges. Landscape 3:2. No writing, logos, UI, watermark, flat vector, 3D or photorealism.
+```text
+第 1 天
+09:30 瑪利亞廣場 | 看建築與廣場
+13:30 慕尼黑王宮
+第 2 天
+10:00 英國花園
+```
 
-福岡主題提示詞：Slender triangular Fukuoka Tower with lattice detail; Nakasu yatai stall with coral awning and paper lanterns beside Nakagawa river, stools, steaming ramen, riverside houses, trees, low bridge, water reflections, Dazaifu plum blossom branch, small coral suitcase. Artist travel collage, not a literal view.
+CSV 第一列可用 `天數,時間,地點,備註,地址`。時間未提供時標為「時間待定」。若來源的天數超過目前手帳，須在預覽指定日期後才能加入。飛行日、班機、飯店、價格與預約仍須自行確認。
 
-東京主題提示詞：Asakusa Kaminarimon gate with a large red lantern without writing, traditional shop facades and plants, Tokyo Skytree with circular observation decks, a modest train, tea cup, camera, ginkgo leaves and flowers. Travel collage with observed proportions and roof details; no other city landmarks.
+## 資料與隱私
+
+升級會沿用該網址原有的紀錄與照片，不會把個人紀錄放到公開網站。不同裝置或網址之間，請下載完整備份再匯入。一般儲存只在瀏覽器內；城市搜尋會傳送查詢字詞，地圖底圖會取得可見範圍的圖磚。清除瀏覽器資料會刪除本機紀錄，請定期備份。
+
+單一 HTML 內嵌所有插畫、地圖程式與台灣資料快照。下載檔案可離線管理已保存的資料與台灣行政區查詢；網路字型、底圖、海外搜尋、官方資料更新與 OCR 元件需要網路。資料庫營運狀態不等於即時開放資訊，出發前請查景點管理單位與交通服務。
+
+## 公開資料與授權
+
+- 台灣景點：[交通部觀光署／政府資料開放平臺](https://data.gov.tw/dataset/7777)，依政府資料開放授權條款第 1 版使用。僅內嵌公開景點名稱、座標、行政區、狀態與更新時間。
+- 行政區名單與參考點：[內政部國土測繪中心](https://maps.nlsc.gov.tw/pro/download.jsp)。368 個代碼與名稱已與 ListCounty／ListTown1 現行服務逐項核對。
+- 城市座標與近期天氣：[Open-Meteo／GeoNames](https://open-meteo.com/)。
+- 海外景點及中英文名稱：[Wikipedia／MediaWiki](https://www.mediawiki.org/wiki/API:Main_page)；餐廳、市集與商店：[OpenStreetMap](https://www.openstreetmap.org/copyright)。
+- 底圖：© OpenStreetMap contributors；地圖程式 Leaflet 1.9.4，BSD 2-Clause License，完整授權保留於 HTML 及第三方授權文件。
+
+`index.html` 為唯一主要來源；`慢慢走旅行手帳-進階版.html` 是相容副本。合併前的兩版可由 Git 提交 `62cc00f` 還原；本機另保留快照。
